@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-audit-heading">Create or edit a Audit</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_aUDId">A UD Id</label>
+                    <input type="number" class="form-control" name="aUDId" id="field_aUDId"
+                           formControlName="aUDId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_aUDUtilisateur">A UD Utilisateur</label>
+                    <input type="text" class="form-control" name="aUDUtilisateur" id="field_aUDUtilisateur"
+                           formControlName="aUDUtilisateur"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_aUDDescription">A UD Description</label>
+                    <input type="text" class="form-control" name="aUDDescription" id="field_aUDDescription"
+                           formControlName="aUDDescription"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_aUDDatetime">A UD Datetime</label>
+                    <div class="input-group">
+                        <input id="field_aUDDatetime" type="text" class="form-control" name="aUDDatetime" ngbDatepicker  #aUDDatetimeDp="ngbDatepicker" formControlName="aUDDatetime"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="aUDDatetimeDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
