@@ -1,0 +1,23 @@
+{
+    "name": "ParamExport",
+    "fields": [
+        {
+            "fieldName": "pEXPublish",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pEXDtlastexport",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190830073552",
+    "entityTableName": "param_export",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

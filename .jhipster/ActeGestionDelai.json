@@ -1,0 +1,61 @@
+{
+    "name": "ActeGestionDelai",
+    "fields": [
+        {
+            "fieldName": "rACCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rAGCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rGACode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aGDDelai",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "aGDAttente",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "aGDComm",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "refGroupeActivite",
+            "otherEntityRelationshipName": "acteGestionDelai",
+            "relationshipName": "refGroupeActivite",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "refActeGestion",
+            "otherEntityRelationshipName": "acteGestionDelai",
+            "relationshipName": "refActeGestion",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "refActivite",
+            "otherEntityRelationshipName": "acteGestionDelai",
+            "relationshipName": "refActivite",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190830073550",
+    "entityTableName": "acte_gestion_delai",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

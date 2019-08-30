@@ -1,0 +1,31 @@
+{
+    "name": "Audit",
+    "fields": [
+        {
+            "fieldName": "aUDId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "aUDUtilisateur",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aUDDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aUDDatetime",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190830073551",
+    "entityTableName": "audit",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

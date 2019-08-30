@@ -1,0 +1,54 @@
+entity RefGroupeActivite {
+	RGACode String,
+    RGALibCourt String,
+    RGALibLong String,
+    RGAComm String,    
+}
+entity RefActeGestion {
+ 	RAGCode String,
+    RAGLibCourt String,
+    RAGLibLong String,
+    RAGComm String,    
+}
+entity RefActivite {
+	RACCode String,
+    RACLibCourt String,
+    RACLibLong String,
+    RACComm String,
+}
+entity ActeGestionDelai {
+	RACCode String,
+	RAGCode String,
+	RGACode String,
+    AGDDelai Long,
+    AGDAttente Long,
+    AGDComm String,	 
+}
+
+entity Audit {
+	AUDId Integer,
+    AUDUtilisateur String,
+    AUDDescription String,
+    AUDDatetime LocalDate, 
+    
+}
+entity ParamExport {
+	PEXPublish Integer,
+    PEXDtlastexport LocalDate,
+}
+
+relationship OneToMany{
+RefGroupeActivite to ActeGestionDelai,
+RefActeGestion to ActeGestionDelai,
+RefActivite to ActeGestionDelai
+}
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
+
